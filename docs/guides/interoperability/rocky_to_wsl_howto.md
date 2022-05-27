@@ -84,8 +84,8 @@ wsl -d rocky_rc
 ```
 16. You are now root in your new RL distro. Run these commands to finish setting everything up:
 ```bash
-yum update
-yum reinstall passwd sudo cracklib-dicts -y
+dnf update
+dnf reinstall passwd sudo cracklib-dicts libuser -y
 newUsername=<your new username>
 adduser -G wheel $newUsername
 echo -e "[user]\ndefault=$newUsername" >> /etc/wsl.conf
